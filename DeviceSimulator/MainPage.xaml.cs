@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.Azure.Devices.Client;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -26,5 +28,39 @@ namespace DeviceSimulator
         {
             this.InitializeComponent();
         }
+
+        private const string ConnectionSting = "HostName=<>.azure-devices.net;DeviceId=<>;SharedAccessKey=<>";
+
+
+        Random r = new Random();
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DeviceClient client = DeviceClient.CreateFromConnectionString(ConnectionSting);
+            Data data = new Data(r.Next(0, 100));
+            string strData = Newtonsoft.Json.JsonConvert.SerializeObject(data);
+            byte[] binaryData = Encoding.UTF8.GetBytes(strData);
+            Message message = new Message(binaryData);
+            client.SendEventAsync(message);
+        }
+    }
+
+    public class Data
+    {
+        private static int id;
+        static Data()
+        {
+            id = 0;
+        }
+        public Data(int value)
+        {
+            DeviceName = "PC";
+            Time = DateTime.Now;
+            Id = id++;
+        }
+        int Id { get; set; }
+        string DeviceName { get; set; }
+        DateTime Time { get; set; }
+        int Value { get; set; }
     }
 }

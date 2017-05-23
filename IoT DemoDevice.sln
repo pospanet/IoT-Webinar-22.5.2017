@@ -5,6 +5,16 @@ VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceSimulator", "DeviceSimulator\DeviceSimulator.csproj", "{6FD1DC3E-B86A-4603-A0CE-D36009DEF3B0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure", "Azure", "{66B663FA-293B-4AE4-B7C2-30096A869C2E}"
+	ProjectSection(SolutionItems) = preProject
+		StreamAnalyticsSQL.sql = StreamAnalyticsSQL.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation deck", "Presentation deck", "{7C1F5222-54B4-47F4-83DE-8404A49896C6}"
+	ProjectSection(SolutionItems) = preProject
+		Azure IoT suite - final.pdf = Azure IoT suite - final.pdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
