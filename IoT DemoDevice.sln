@@ -12,7 +12,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure", "Azure", "{66B663FA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation deck", "Presentation deck", "{7C1F5222-54B4-47F4-83DE-8404A49896C6}"
 	ProjectSection(SolutionItems) = preProject
-		Azure IoT suite - final.pdf = Azure IoT suite - final.pdf
+		Presentation\Azure IoT suite - final.pdf = Presentation\Azure IoT suite - final.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recording", "Recording", "{27170F3D-9DCC-418C-BDBE-32272DC6F7B5}"
+	ProjectSection(SolutionItems) = preProject
+		Recording\IoT webinar part 1 of 2.mp4 = Recording\IoT webinar part 1 of 2.mp4
+		Recording\IoT webinar part 2 of 2.mp4 = Recording\IoT webinar part 2 of 2.mp4
 	EndProjectSection
 EndProject
 Global
